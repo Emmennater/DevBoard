@@ -493,10 +493,15 @@ function initFunctions() {
         setPiece(game.board, row, col, piece, sprite);
     }));
     functions.push(new DefFunction("Get Piece", ["row", "col"], (params, fun) => {
-        let row = params[0].execute();
-        let col = params[1].execute();
-        let tile = getTile(game.board, row, col);
-        return tile.piece;
+        try {
+            let row = params[0].execute();
+            let col = params[1].execute();
+            let tile = getTile(game.board, row, col);
+            if (tile)
+            return tile.piece;
+        } catch (exception) {
+            return null;
+        }
     }));
     functions.push(new DefFunction("Get Piece At", ["location"], (params, fun) => {
         let tile = params[0].execute();
@@ -508,6 +513,7 @@ function initFunctions() {
         let colStep = params[1].execute();
         let rowStep = params[2].execute();
         let range = params[3].execute();
+        if (!piece) return;
         piece.allowMotion(colStep, rowStep, range);
     }));
     functions.push(new DefFunction("Allow Motion On Condition", ["piece", "row step", "col step", "range", "condition", "event"], (params, fun) => {
@@ -535,12 +541,17 @@ function initFunctions() {
         // have to fix this so each piece has their own instance
         // of all these functions...
         let condition = (toTile, vector)=>{
-            let bool = params[4].execute(getScope(toTile, vector));
+            let bool = false;
+            if (params[4])
+                bool = params[4].execute(getScope(toTile, vector));
             return bool;
         }
         
         let event = ()=>{};
-        if (params[5]) event = (toTile, vector)=>params[5].execute(getScope(toTile, vector));
+        if (params[5]) event = (toTile, vector)=>{
+            if (params[5])
+                params[5].execute(getScope(toTile, vector));
+        }
 
         piece.allowMotion(colStep, rowStep, range, condition, event);
     }));
