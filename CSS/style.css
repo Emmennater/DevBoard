@@ -1,0 +1,182 @@
+body {
+/*   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; */
+  /* https://wallpaper-house.com/data/out/4/wallpaper2you_36693.jpg */
+  background-image: url("https://imgtr.ee/images/2023/05/03/a8unr.jpg");
+  background-size: cover;
+
+  /* -webkit-mask-image: url("https://thumbs.dreamstime.com/b/static-tv-noise-abstract-background-computer-generated-91369113.jpg"); */
+  /* background-color: rgb(34, 34, 34); */
+/*   background-image: radial-gradient(#444444, #111111); */
+/*   background-size: cover; */
+/*   background-image: url("https://opengameart.org/sites/default/files/industrial-background.jpg"); */
+/*   background-image: linear-gradient(#ffbbbb, #8888ff); */
+/*   background-image: linear-gradient(#f7a1f6,#93cdcf); */
+}
+
+canvas {
+  display: flex;
+  justify-content: center;
+/*   margin: 8px; */
+/*   max-width: calc(min(40vw, 70vh)); */
+  width: auto;
+  height: auto;
+  margin: 8px;
+  border-radius: 8px;
+/*   flex: 1; */
+/*   height: 100%; */
+/*   max-width: 50vw; */
+/*   max-width: 600px; */
+/*   width: 50vw; */
+  
+/*   background-color: #444444; */
+/*   background-color: transparent; */
+/*   background-image: url("https://t3.ftcdn.net/jpg/05/07/91/20/360_F_507912092_AV3KVOTHBzarjvX43QYVlFarRGhu1x6Y.jpg"); */
+/*   background-image: linear-gradient(#ffbbbb, #8888ff); */
+  box-shadow: 0px 4px 8px #00000066;
+  /* box-shadow: 0px 0px 8px red; */
+
+}
+
+
+h1, h2, h3 {
+  font-family: "Trebuchet MS";
+  text-align: center;
+  white-space: pre;
+}
+
+h1 {
+  font-size: 34px;
+  margin: 8px;
+  padding: 0px;
+}
+
+h2 {
+  flex: 1;
+  margin: 4px;
+  text-align: left;
+}
+
+h3 {
+  margin: 2px 4px;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  list-style-type: decimal;
+  padding-left: 26px;
+}
+
+/* Hide ordered list when empty */
+ol:empty {
+  display: none;
+}
+
+li {
+  flex: 1;
+  white-space: nowrap;
+  color: white;
+}
+
+input {
+  width: calc(100% - 8px);
+  display: inline;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ddd;
+  /* #53d1cd */
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.ewide {
+  min-width: 160px;
+/*   max-width: 300px; */
+}
+
+.desc {
+  padding: 2px 4px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.dropback {
+  text-shadow: 0px 2px 0px #22A39F;
+}
+
+.heading {
+  text-align: center;
+  margin-left: 32px;
+  font-size: 24px;
+}
+
+.noselect, .menu, .sidebar, .title, .editor, #function-menu {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

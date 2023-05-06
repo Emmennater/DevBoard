@@ -1,0 +1,76 @@
+
+=================== Game Master ========================= 
+  A board game that can be fully programmed by the user
+Anything from the peices on the board to the rules of the
+game can be modified by the user using simple rule layout
+   machanics. Should be paired with a comfortable UI.
+=========================================================
+
+Fundemental Rules:
+- Rectangle grid
+- Peices that display for their designated tile
+- Actions for the users
+
+Customization Concepts:
+- General:
+  ~ Board Size
+  ~ Triggers (actions taken on event of the game)
+  ~ Animations
+  ~ Variables:
+    - Global Vars (for the entire game)
+    - Local Vars (for each object)
+    - Time (time for each player and combined duration)
+- Tiles:
+  ~ Behavior
+  ~ Design
+- Pieces:
+  ~ Location
+  ~ Movement
+  ~ Behavior
+  ~ Design
+  ~ Tile Occupancy (size or shape)
+
+Ideas:
+- Tiles:
+  ~ Fog (hide the piece underneath)
+  ~ Stonewall (cannot be occupied)
+  ~ Void (an empty tile)
+  ~ Portal (teleport to another portal) [colored]
+  ~ 
+
+Notes:
+- Could just program with JavaScript
+
+Possible Names:
+- Game Master
+- Board Forge
+- Progame
+- Ezoboard
+- Proboard
+- Idea Machine
+- Think o' Board
+- Bullet Board
+- Create & Play
+- The Thought Machine
+- The Forevoboard
+- The Board Machine
+- The Dev Board
+
+Logic Development
+- Everything is a function
+- Name and params and Variables and so on...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

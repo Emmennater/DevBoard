@@ -1,0 +1,142 @@
+/* ICON BUTTON */
+.button {
+  display: inline;
+/*   text-align: center;
+  vertical-align: middle; */
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  max-width: 24px;
+  margin: 0;
+  margin-right: 4px;
+  padding: 0;
+/*   border: none; */
+/*   padding: 0px 6px; */
+  border: 0px solid #1b827f;
+  border-radius: 20px;
+  background: #2cd4cf;
+  background: linear-gradient(to bottom, #29CAC5 50%, #219C99 50%);
+  box-shadow: #545454 0px 0px 7px 0px;
+  font: normal normal 500 18px "Impact";
+  color: #ffffff;
+  text-decoration: none;
+/*   background-color: red; */
+}
+.button:hover,
+.button:focus {
+  cursor: pointer;
+}
+.button:active {
+    scale: 0.9;
+}
+
+/* Disabled property */
+.button:disabled {
+  opacity: 0.5;
+  scale: 1.0;
+  cursor: default;
+}
+
+
+/* OBJECT BUTTON */
+
+.options-button,
+.selbutton {
+  display: block;
+  text-align: center;
+  /* vertical-align: middle; */
+  padding: 1px 8px;
+  margin: 6px 2px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: transparent;
+  height: 24px;
+  max-width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  /* font: normal normal normal 16px cursive; */
+  font: normal normal normal 16px;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family:cursive;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.options-button:hover,
+.selbutton:hover {
+  cursor: pointer;
+  background: #ffffff11;
+}
+.options-button:active,
+.selbutton:active {
+    scale: 0.97
+}
+
+.options-button {
+  display: inline;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Hide the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #666666;
+  border-radius: 2px;
+  min-height: 50px; /* Set the height of the scrollbar thumb */
+}
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+
+
+
+.selbutton.selected {
+  color: rgb(67, 66, 66);
+  background-color: white;
+  font-weight: 800;
+}
+.options-button.selected {
+  color: white;
+  background: linear-gradient(to bottom right, #22A39F 50%, #197c79 50%);
+}
+#removing.selected {
+  background: linear-gradient(to bottom right, rgb(230, 26, 67) 50%, rgb(179, 15, 48) 50%);
+  color: white;
+}
+.selbutton.selected:hover {
+  filter: brightness(1.2);
+}
+.options-button.selected:hover {
+  filter: brightness(1.2);
+}
+#removing.selected:hover {
+  filter: brightness(1.2);
+}
+.options-button:disabled {
+  opacity: 0.5;
+  filter: brightness(1.0);
+  scale: 1.0;
+  background: transparent;
+  cursor: default;
+}
+button.options-button {
+  height: auto;
+}
+
+
+
+
+
+
+
+
+

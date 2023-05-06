@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="CSS/layout.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/generated.css">
+    <link rel="stylesheet" type="text/css" href="CSS/gui-components.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    
+    <!-- Website -->
+    <div id="main-page" class="site-container" style="visibility: hidden;">
+      <div class="virt-box">
+        <h1 class="title"><span class="first">Dev </span></span>Board</h1>
+        <div class="horz-box">
+          
+          <!-- Rules and Pieces -->
+          <div class="sidebar">
+            <br>
+            <div class="container">
+              <h2>Pieces</h2>
+              <button class="button" onclick="newPieceBlueprint()">+</button>
+            </div>
+            <div id="pieces" class="button-group"></div>
+            <div class="container">
+              <h2>Rules</h2>
+              <button class="button" onclick="newRuleBlueprint()">+</button>
+            </div>
+            <div id="rules" class="button-group"></div>
+            <br>
+          </div>
+          
+          <!-- Board and Editor -->
+          <div class="virt-box" style="flex: 1.3; max-width: 60vh; min-width: 30vh">
+            <canvas id="board" width="400" height="400"></canvas>
+            
+            <div class="fill editor">
+              <h2 class="center">Board Editor</h2>
+              <div class="editor-button-group">
+                <button id="editing" class="options-button" onclick="toggleBoardEditing()">Edit</button>
+                <button id="removing" class="options-button" onclick="toggleRemovingPieces()">Remove</button>
+                <button id="cycle-sprite" class="options-button" onclick="cyclePieceSprite()">Next Sprite</button>
+                <button id="reload-board" class="options-button" onclick="reloadBoard()">Reload</button>
+                <button id="copy-game-json" class="options-button" onclick="copyGameJson()">Save Game</button>
+                <button id="paste-game-json" class="options-button" onclick="pasteGameJson()">Load Game</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Object design -->
+          <div class="menu">
+            <!-- Basic Info -->
+            <div class="title-container">
+              <h2 id="selected-title" class="center"></h2>
+              <button id="remove-obj" class="button" onclick="removeSelected()">-</button>
+            </div>
+            <div id="selected-desc" class="ewide desc"></div>
+            
+            <!-- Sprites -->
+            <br>
+            <wrapper id="sprite-url-group">
+              <div class="title-container">
+                <h3 style="white-space:pre; margin-left: 8px">SPRITE URLS</h3>
+                <div class="button-group">
+                  <button id="add-url" class="button" onclick="addUrlToSelected()">+</button>
+                  <button id="remove-url" class="button" onclick="removeUrlFromSelected()">-</button>
+                </div>
+              </div>
+              <div id="sprite-urls" class="obj-elem">
+                <ol id="sprite-urls-list"></ol>
+              </div>
+            </wrapper>
+            
+            <!-- Programming Area -->
+            <wrapper id="logic-group" style="visibility: hidden;">
+              <div class="title-container">
+                <h2 class="center">Object Logic</h2>
+                <button id="add-logic" class="button" onclick="addLogicFunction()">+</button>
+              </div>
+              <div id="program-area">
+                
+              </div>
+            </wrapper>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Function Menu -->
+    <div id="function-menu" style="visibility: hidden;">
+      <div class="toolbar">
+        <h3>Function</h3>
+        <button id="delete-function" class="toolbar-button">[Delete]</button>
+        <button id="close-fmenu" class="close-button">╳</button>
+      </div>
+      <div class="content">
+        <!-- Function Name -->
+        <div class="horz-box">
+          <h3>Name</h3>
+          <input id="function-name" list="functions-list" name="functions">
+          <datalist id="functions-list"></datalist>
+        </div>
+        <button class="options-button" style="margin-top: 10px" onclick="editFunction(addFunctionParameter())">Add Parameter</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="Utils/helper.js"></script>
+    <script src="Actions/window.js"></script>
+    <script src="Actions/mouse.js"></script>
+    <script src="Actions/behavior.js"></script>
+    <script src="Devices/tile.js"></script>
+    <script src="Devices/piece.js"></script>
+    <script src="Devices/board.js"></script>
+    <script src="Devices/display.js"></script>
+    <script src="Devices/animate.js"></script>
+    <script src="Devices/game.js"></script>
+    <script src="Rules/chess.js"></script>
+    <script src="Editor/Objects/object.js"></script>
+    <script src="Editor/Objects/piece.js"></script>
+    <script src="Editor/Objects/rule.js"></script>
+    <script src="Editor/ui.js"></script>
+    <script src="Editor/functions.js"></script>
+    <script src="Editor/Presets/chess.js"></script>
+    <script src="sketch.js"></script>
+    
+  </body>
+</html>

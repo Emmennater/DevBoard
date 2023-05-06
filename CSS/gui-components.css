@@ -1,0 +1,226 @@
+
+.obj-elem {
+  margin: 6px 4px;
+}
+
+#selected-title {
+  flex: 1;
+  text-align: center;
+  margin-left: 32px;
+}
+
+#sprite-urls {
+  display: flex;
+  flex-direction: column;
+  max-height: 100px;
+  padding: 4px;
+  margin-top: 4px;
+  background-color: #00000011;
+  /* background-color: #353838; */ /*rgb(67, 66, 66)*/
+  box-shadow: inset 0px 0px 4px #00000088;
+  border-radius: 4px;
+
+  overflow-y: scroll;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+#program-area {
+  padding: 0px;
+  margin: 4px;
+  height: 100%;
+  border-radius: 4px;
+  
+  /* backdrop-filter: blur(5px); */
+  /* background-color: #00000020; */
+  /* background-color: #555; */
+  /* box-shadow: inset 0px 0px 8px #00000044; */
+  overflow-x: hidden;
+
+}
+
+.def {
+  display: block;
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* flex-direction: column; */
+  width: auto;
+  height: auto;
+  padding: 3px 2px;
+  border-radius: 3px;
+  margin: 10px 0px;
+  /* outline: outset 3px rgb(148, 175, 180); */
+
+  /* background: repeating-linear-gradient(
+    -45deg,
+    #555,
+    #555 12px,
+    #666 12px,
+    #666 24px
+  ); */
+  background-color: #00000011;
+
+  box-shadow: inset 0px 0px 4px #00000088;
+  /* overflow-x: hidden; */
+  overflow-x: auto;
+}
+.def.child {
+  /* flex-wrap: wrap; */
+  box-shadow: none;
+  margin: 4px 4px;
+  background: none;
+  /* box-shadow: 0px 0px 8px #00000020; */
+  outline: none;
+  overflow: initial;
+  margin-left: 10px;
+}
+.def.child.depth-1 {
+  background-color: #00000030;
+}
+.def.child.depth-2 {
+  background-color: #ffffff20;
+  /* rgb(30, 176, 202); */
+  /* rgb(202, 125, 30); */
+}
+.def.child.depth-3 {
+  background-color:rgb(223, 223, 223);
+}
+  /* -webkit-mask-image: linear-gradient(to right, black 80%, transparent 97%);
+  mask-image: linear-gradient(to right, black 80%, transparent 97%); */
+
+  /* width: 100%; */
+  /* margin-right: 0px; */
+
+.fname {
+  display: flex;
+  flex: 1;
+  height: 20px;
+  padding: 0px 4px;
+  border-radius: 3px;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Trebuchet MS";
+  font-weight: 100;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  /* text-shadow: 0px 0px 4px black; */
+
+  background-color: transparent;
+}
+.fname.default {
+  color: #bbb;
+}
+.def.child .fname {
+  font-family: "Trebuchet MS";
+  font-weight: normal;
+}
+.fname:hover {
+  text-shadow: 0px 0px 4px #ffffff44;
+}
+.fname.default:hover {
+  text-shadow: 0px 0px 4px #ffffff22;
+}
+.fname:active {
+  color: #eee;
+}
+.fname.default:active {
+  color: #aaa;
+}
+
+#function-menu {
+  display: block;
+  width: 40vw;
+  height: auto;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border: solid 4px white;
+  box-shadow: 0px 0px 16px #00000099;
+
+  backdrop-filter: blur(12px);
+  background-color: #ffffff11;
+}
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  background-color: white;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0 10px;
+  /* font-family: "Arial"; */
+}
+.toolbar-button {
+  display: inline;
+  /* margin-left: 10px; */
+  max-width: 100px;
+  /* border: solid 2px black; */
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  font-family: "Trebuchet MS";
+  font-size: 18px;
+  color: #22A39F;
+}
+.close-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  cursor: pointer;
+  top: 1px;
+  right: 12px;
+}
+.content {
+  margin: 8px;
+  margin-top: 42px;
+  color: white;
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+}
+
+#function-menu input {
+  display: inline;
+  flex: 1;
+  height: 26px;
+  border: solid 2px white;
+  border-radius: 3px;
+  color: white;
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+  padding: 0px 6px;
+}
+
+datalist {
+  position: absolute;
+  max-height: 20em;
+  border: 0 none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+datalist option {
+  font-size: 0.8em;
+  padding: 0.3em 1em;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* option active styles */
+datalist option:hover, datalist option:focus {
+  color: #fff;
+  background-color: #036;
+  outline: 0 none;
+}
+

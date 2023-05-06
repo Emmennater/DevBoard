@@ -1,0 +1,75 @@
+
+.horizontal-box {
+  display: flex;
+  flex-direction: row;
+/*   width: 100%; */
+/*   flex: 1; */
+/*   display: grid;
+  grid-auto-flow: column; */
+  margin: 4px;
+  
+  background-color: rgb(67, 66, 66);
+}
+
+.vertical-box {
+  display: flex;
+  flex-direction: column;
+/*   height: 100%; */
+/*   flex: 1; */
+/*   display: grid;
+  grid-auto-flow: row; */
+  margin: 4px;
+  
+  background-color: rgb(67, 66, 66);
+}
+
+.fill-area {
+  padding: 6px;
+  margin: 4px;
+  width: auto;
+  height: auto;
+  flex: 1;
+  
+  font-family: "Trebuchet MS";
+  box-shadow: 0px 0px 8px #00000088;
+  background-color: rgb(60,63,63);
+  color: white;
+}
+
+.scroll-group {
+  height: 50vh;
+  max-height: calc(100% - 20px);
+  min-width: 120px;
+/*   overflow-y: scroll; */
+/*   overflow-x: hidden; */
+}
+
+.button-group {
+/*   justify-content: center; */
+/*   overflow-y: auto; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

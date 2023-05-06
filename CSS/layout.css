@@ -1,0 +1,196 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/* Bounds of the page */
+.site-container {
+  display: grid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  height: 95vh;
+
+  background-color: transparent;
+  /* filter: blur(2px); */
+  /* background-color: #35383866; */
+}
+
+/* Stack virtically */
+.virt-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-x: hidden;
+  gap: 4px;
+  
+/*   box-shadow: 0px 0px 8px #00000088; */
+  background-color: transparent;
+}
+
+/* Stacks horizontally */
+.horz-box {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow-y: hidden;
+  gap: 4px;
+  
+  background-color: transparent;
+}
+
+/* Fills a zone */
+.fill {
+/*   display: flex; */
+/*   flex: 1.2; */
+  background-color: transparent;
+/*   background-color: darkorange; */
+}
+
+/* Special */
+.title {
+  margin: 8px;
+  padding: 4px 10px;
+  
+  /* background-color: transparent; */
+  /* background-color: #00000033; */
+  background: linear-gradient(to left, transparent 10%, #00000033 30%, #00000033 70%, transparent 90%);
+  /* background-color: rgb(60,63,63); */
+  /* border: solid 2px white; */
+  border-radius: 8px;
+  color: white;
+  /* -webkit-text-stroke: 1px white; */
+  font-size: 38px;
+  font-family: "Tahoma";
+  text-shadow: 0px 0px 6px #000000bb;
+  /* text-shadow: 0px 0px 8px #00000088, 0px 0px 8px white; */
+  /* box-shadow: 0px 0px 8px #00000088; */
+}
+
+span.first {
+  color:#30cec9;
+  /* text-shadow: 0px 0px 8px #00000088; */
+  /* -webkit-text-stroke: 1px #30cec9; */
+  /* text-shadow: 0px 0px 8px #00000088, 0px 0px 8px #56fff9; */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  min-width: 140px;
+  max-height: 60vh;
+  padding: 6px 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 8px;
+  padding: 4px;
+
+  font-family: "Trebuchet MS";
+  color: white;
+  /* background: linear-gradient(to bottom, #ffffff11 0%, transparent 100%); */
+  -webkit-mask-image: linear-gradient(transparent, black 5%, black 95%, transparent 100%);
+          mask-image: linear-gradient(transparent, black 5%, black 95%, transparent 100%);
+  border-radius: 8px;
+  /* background-color: rgb(60,63,63); */
+  /* background-color: #3c3f3f66; */
+  /* background-color: #00000022; */
+  /* background-color: transparent; */
+  /* box-shadow: 0px 0px 8px #00000088; */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  flex: 1;
+  padding: 6px 0px;
+  margin: 8px;
+  padding: 4px;
+  margin-right: 12px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  font-family: "Trebuchet MS";
+  color: white;
+  /* border: solid 2px white; */
+  border-radius: 8px;
+  background-color: #00000033;
+  /* background-color: rgb(60,63,63); */
+  /* box-shadow: 0px 0px 8px #00000088; */
+}
+
+.editor {
+  display: grid;
+  margin-top: 8px;
+  padding: 4px;
+  justify-content: center;
+
+  font-family: "Trebuchet MS";
+  color: white;
+  background-color: #00000033;
+  border-radius: 8px;
+  /* border: solid 2px white; */
+  /* background-color: rgb(60,63,63); */
+  /* box-shadow: 0px 0px 8px #00000088; */
+}
+
+.editor-button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 6px;
+}
+
+.input-line {
+  display: inline;
+  width: auto;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0px 4px;
+  padding-bottom: 2px;
+  margin: 2px 2px;
+  font-size: 14px;
+  border: solid 1px gray;
+}
+
+/* Remove the border when the div is in focus */
+.input-line:focus {
+  outline: none;
+  border: solid 1px lightgray;
+}
+
+/* Elements */
+/* button {
+  font-size: 24px;
+  margin: 4px 10px;
+  white-space: nowrap;
+  background-color: orange;
+} */
+
+button:hover {
+  cursor: pointer;
+  /* filter: brightness(1.1); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
