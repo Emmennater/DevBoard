@@ -510,17 +510,14 @@ function initFunctions() {
         let range = params[3].execute();
         piece.allowMotion(colStep, rowStep, range);
     }));
-    functions.push(new DefFunction("Allow Motion On Condition", ["piece", "row step", "col step", "range", "condition"], (params, fun) => {
+    functions.push(new DefFunction("Allow Motion On Condition", ["piece", "row step", "col step", "range", "condition", "event"], (params, fun) => {
         let piece = params[0].execute();
         let colStep = params[1].execute();
         let rowStep = params[2].execute();
         let range = params[3].execute();
-        
-        // The "this" reference to piece has been broke by now
-        // have to fix this so each piece has their own instance
-        // of all these functions...
-        let condition = (toTile, vector)=>{
-            let bool = params[4].execute([
+
+        let getScope = (toTile, vector) => {
+            return [
                 {name:"piece", value:piece},
                 {name:"piece.row", value:()=>piece.tile.row},
                 {name:"piece.col", value:()=>piece.tile.col},
@@ -531,10 +528,21 @@ function initFunctions() {
                 {name:"vector", value:toTile.col},
                 {name:"vector.rows", value:()=>vector.rows},
                 {name:"vector.cols", value:()=>vector.cols},
-            ]);
+            ];
+        }
+
+        // The "this" reference to piece has been broke by now
+        // have to fix this so each piece has their own instance
+        // of all these functions...
+        let condition = (toTile, vector)=>{
+            let bool = params[4].execute(getScope(toTile, vector));
             return bool;
         }
-        piece.allowMotion(colStep, rowStep, range, condition);
+        
+        let event = ()=>{};
+        if (params[5]) event = (toTile, vector)=>params[5].execute(getScope(toTile, vector));
+
+        piece.allowMotion(colStep, rowStep, range, condition, event);
     }));
     functions.push(new DefFunction("Reset Restricted Motion", ["piece"], (params, fun) => {
         let piece = params[0].execute();

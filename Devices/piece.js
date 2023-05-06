@@ -20,9 +20,9 @@ class Piece {
     }
   }
   
-  allowMotion(rowStep, colStep, range, condition = ()=>true) {
+  allowMotion(rowStep, colStep, range, condition = ()=>true, event = ()=>true) {
     let hash = rowStep + "," + colStep + "," + range + "," + this.motionVectors;
-    this.allowedMotionVectors[hash] = {rowStep, colStep, range, condition, index: this.motionVectors};
+    this.allowedMotionVectors[hash] = {rowStep, colStep, range, condition, event, index: this.motionVectors};
     this.motionVectors++;
   }
 
@@ -71,7 +71,10 @@ class Piece {
     for (let key of Object.keys(this.allowedMotionVectors)) {
       // Check condition
       if (!this.allowedMotionVectors[key].condition(tile, vector)) continue;
-      if (checkMotionVector(this.allowedMotionVectors[key])) return true;
+      if (checkMotionVector(this.allowedMotionVectors[key])) {
+        this.allowedMotionVectors[key].event(tile, vector);
+        return true;
+      }
     }
 
     return false;
